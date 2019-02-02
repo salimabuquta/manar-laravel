@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Http\Managers\EmailsManager;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -27,4 +28,16 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public static function boot()
+    {
+        parent::boot();
+        // created.
+        self::created(function ($model) {
+            // the following line to send email using sendgrid
+//            EmailsManager::onSaveUser($model);
+            return $model;
+        });
+    }
+
 }

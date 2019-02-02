@@ -1953,7 +1953,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     onSubmit: function onSubmit(e) {
       e.preventDefault();
-      var link = "/test/api/users/save";
+      var link = "api/users/save";
 
       var _this = this;
 
@@ -2095,7 +2095,7 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     var _this = this;
 
-    var link = "/test/api/users/all";
+    var link = "api/users/all";
     axios.get(link).then(function (response) {
       _this.users = response.data;
     });
@@ -2110,7 +2110,7 @@ __webpack_require__.r(__webpack_exports__);
     onChangeSorting: function onChangeSorting() {
       var _this = this;
 
-      var link = "/test/api/users/all/?sort_type=" + this.sort_type;
+      var link = "api/users/all/?sort_type=" + this.sort_type;
       axios.get(link).then(function (response) {
         _this.users = response.data;
       });
@@ -2121,7 +2121,7 @@ __webpack_require__.r(__webpack_exports__);
 
       var _this = this;
 
-      var link = "/test/api/users/update";
+      var link = "api/users/update";
       axios.post(link, {
         id: id,
         username: new_username
@@ -49268,8 +49268,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! E:\xampp\htdocs\test\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! E:\xampp\htdocs\test\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! E:\xampp\htdocs\laravel.test\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! E:\xampp\htdocs\laravel.test\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
