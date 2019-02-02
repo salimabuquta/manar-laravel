@@ -55,7 +55,7 @@
         },
         mounted() {
             let _this = this;
-            let link = "/test/api/users/all";
+            let link = "api/users/all";
             axios.get(link).then(response => {
                 _this.users = response.data;
             });
@@ -68,7 +68,7 @@
         methods: {
             onChangeSorting: function () {
                 let _this = this;
-                let link = "/test/api/users/all/?sort_type=" + this.sort_type;
+                let link = "api/users/all/?sort_type=" + this.sort_type;
                 axios.get(link).then(response => {
                     _this.users = response.data;
                 })
@@ -77,7 +77,7 @@
                 let id = item.id;
                 var new_username = event.target.value;
                 let _this = this;
-                let link = "/test/api/users/update";
+                let link = "api/users/update";
                 axios.post(link, {
                     id: id,
                     username: new_username

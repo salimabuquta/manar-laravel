@@ -147,7 +147,7 @@
             },
             onSubmit: function (e) {
                 e.preventDefault();
-                let link = "/test/api/users/save";
+                let link = "api/users/save";
                 let _this = this;
 
                 var formData = new FormData();
